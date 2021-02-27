@@ -52,6 +52,10 @@ d3.csv("assets/data/data.csv").then(function(stateData, err) {
     })])
     .range([height, 0]);
 
+    //creating my axes
+    let bottomAxis = d3.axisBottom(xLinearScale);
+    let leftAxis = d3.axisLeft(yLinearScale);
+
     //Appending Axes to the chart
     chartGroup.append("g")
         .attr("transform", `translate(0, ${height})`)
@@ -59,6 +63,8 @@ d3.csv("assets/data/data.csv").then(function(stateData, err) {
 
     chartGroup.append("g")
         .call(leftAxis);
+
+
 
     
 });
