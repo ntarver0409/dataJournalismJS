@@ -20,6 +20,18 @@ let svg = d3
     .attr("width", svgWidth)
     .attr("height", svgHeight);
 
+//Appending a svg group to my html
+
+let chartGroup = svg.append("g");
+
+// Initial parameters 
+
+chosenXaxis = "income";
+
+d3.csv("./data/data.csv").then(function(stateData, err) {
+    if (err) throw err;
+});
+
 
 
 
