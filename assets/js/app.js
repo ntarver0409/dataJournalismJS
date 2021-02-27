@@ -13,5 +13,14 @@ let margins = {
 let width = svgWidth - margins.left - margins.right;
 let height = svgHeight - margins.top - margins.bottom;
 
+//Making my svg wrapper 
+let svg = d3
+    .select("scatter")
+    .append("svg")
+    .attr("width", svgWidth)
+    .attr("height", svgHeight);
+
+
+
 
 
