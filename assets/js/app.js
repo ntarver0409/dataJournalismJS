@@ -73,12 +73,6 @@ d3.csv("assets/data/data.csv").then(function(stateData, err) {
 
     console.log(stateData);
 
-    // circles.append("text")
-    //     .text( d => d.abbr)
-    //     .attr("dx", d => xLinearScale(d.poverty))
-    //     .attr("dy", d => yLinearScale(d.healthcare))
-    //     .classed("stateText", true);
-
         
 
     let text = chartGroup.selectAll("g circles")
@@ -91,9 +85,6 @@ d3.csv("assets/data/data.csv").then(function(stateData, err) {
             return d.abbr;
         })
         .classed("stateText", true);
-        // .attr("font-size", "10px")
-        // .attr("text-anchor", "middle")
-        // .attr("fill", "black");
 
     // Creating axes labels
     chartGroup.append("text")
